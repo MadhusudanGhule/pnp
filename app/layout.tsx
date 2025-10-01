@@ -5,8 +5,11 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'PNP Matrix - Professional Pick & Place Solutions',
+  title: 'Dimensions Print - PCB Assembly and Custom Automation',
   description: 'Professional desktop pick and place machine for PCB assembly and custom automation. High-precision component placement for prototypes and production.',
+  icons: {
+    icon: './Dimensionsprintlogo',
+  },
 };
 
 export default function RootLayout({

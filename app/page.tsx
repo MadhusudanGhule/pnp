@@ -6,7 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Cpu, Zap, Target, Layers, Mail, Phone, CircleCheck as CheckCircle2, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import ContactForm from "@/components/contact-form";
-
+import Image from "next/image";
+import logo from "./Dimensionsprintlogo.png"
 export default function Home() {
   const [showContact, setShowContact] = useState(false);
   const siteName = "Dimensions Print"; // change your application name here
@@ -17,8 +18,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="relative w-9 h-9">
-              <div className="absolute inset-0 bg-gray-900 transform rotate-45 rounded-sm"></div>
-              <div className="absolute inset-1 bg-white transform rotate-45 rounded-sm"></div>
+              <Image src={logo} alt="Dimensions Print" width={36} height={36} />
             </div>
             <span className="text-xl font-bold text-gray-900">{siteName}</span>
           </div>
@@ -276,7 +276,8 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="relative w-8 h-8">
-                  <div className="absolute inset-0 bg-white transform rotate-45"></div>
+                  {/* <div className="absolute inset-0 bg-white transform rotate-45"></div> */}
+                  <Image src={logo} alt="Dimensions Print" width={36} height={36} />
                 </div>
                 <span className="text-xl font-bold">{siteName}</span>
               </div>
@@ -311,7 +312,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 PNP Pro. All rights reserved.</p>
+            <p>&copy; 2025 Dimensions Print. All rights reserved.</p>
           </div>
         </div>
       </footer>
