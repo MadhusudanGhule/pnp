@@ -37,8 +37,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
+            <Badge className="mb-4 bg-gray-100 text-gray-900 hover:bg-gray-200">
+            ⚠️ under development
+              </Badge>
               <Badge className="mb-4 bg-gray-100 text-gray-900 hover:bg-gray-200">
-                Professional PCB Assembly
+              PCB Assembly and Custom Automation
               </Badge>
               <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Desktop Pick & Place
