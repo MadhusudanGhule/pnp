@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cpu, Zap, Target, Layers, Mail, Phone, CircleCheck as CheckCircle2, ArrowRight } from "lucide-react";
+import { Cpu, Zap, Target, Layers, Mail, Phone, CircleCheck as CheckCircle2, ArrowRight, MapPin, Building2 } from "lucide-react";
 import { useState } from "react";
 import ContactForm from "@/components/contact-form";
 import Image from "next/image";
@@ -217,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="applications" className="py-20 px-6 bg-gray-50">
+      {/* <section id="applications" className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
@@ -279,6 +279,119 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section> */}
+
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-blue-100 text-blue-900 hover:bg-blue-200">
+              Service Coverage
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Available Across Maharashtra</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We proudly serve customers throughout Maharashtra with our innovative 3D printing and PCB assembly services
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Service Coverage Info */}
+            <div>
+              <div className="relative">
+                <div className="absolute inset-0 origin-center rotate-2 rounded-2xl bg-gradient-to-br from-blue-200 to-indigo-200"></div>
+                <div className="relative bg-white p-8 rounded-2xl border border-gray-100 origami-shadow">
+                  <div className="flex items-center gap-3 mb-6">
+                    <MapPin className="h-8 w-8 text-blue-600" />
+                    <h3 className="text-2xl font-bold text-gray-900">State-Wide Coverage</h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    From bustling cities to emerging towns, we bring cutting-edge manufacturing solutions 
+                    to every corner of Maharashtra. Our services are designed to support local businesses 
+                    and communities across the state.
+                  </p>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600" />
+                      <span className="text-gray-700">Fast delivery across all major cities</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600" />
+                      <span className="text-gray-700">Local support and consultation</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600" />
+                      <span className="text-gray-700">On-site project assistance available</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600" />
+                      <span className="text-gray-700">Regional partnerships for faster service</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Major Cities Grid */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Major Service Areas</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  { city: "Mumbai", region: "Western Maharashtra", icon: Building2 },
+                  { city: "Pune", region: "Western Maharashtra", icon: Building2 },
+                  { city: "Nagpur", region: "Vidarbha Region", icon: Building2 },
+                  { city: "Nashik", region: "Northern Maharashtra", icon: Building2 },
+                  { city: "Aurangabad", region: "Marathwada Region", icon: Building2 },
+                  { city: "Solapur", region: "Southern Maharashtra", icon: Building2 },
+                  { city: "Kolhapur", region: "Western Maharashtra", icon: Building2 },
+                  { city: "Satara", region: "Western Maharashtra", icon: Building2 }
+                ].map((location, index) => (
+                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-white/50 hover:bg-white hover:shadow-md transition-all origami-card">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <location.icon className="h-5 w-5 text-blue-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900">{location.city}</h4>
+                        <p className="text-sm text-gray-600">{location.region}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Additional Coverage Note */}
+              <div className="mt-6 text-center">
+                <div className="bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-white/50">
+                  <p className="text-gray-700 font-medium mb-2">
+                    <MapPin className="h-4 w-4 inline mr-1 text-blue-600" />
+                    Complete Maharashtra Coverage
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    We serve all districts and cities across Maharashtra. 
+                    <span className="font-medium text-blue-600"> Contact us</span> for service in your area.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/50 max-w-2xl mx-auto origami-shadow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Ready to Serve Your Location?
+              </h3>
+              <p className="text-gray-600 mb-6">
+                No matter where you are in Maharashtra, we're here to help bring your projects to life 
+                with our advanced manufacturing solutions.
+              </p>
+              <Button onClick={() => setShowContact(true)} size="lg" className="bg-blue-600 hover:bg-blue-700">
+                Check Service in Your Area
+              </Button>
+            </div>
           </div>
         </div>
       </section>
