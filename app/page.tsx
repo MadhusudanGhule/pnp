@@ -8,6 +8,14 @@ import { useState } from "react";
 import ContactForm from "@/components/contact-form";
 import Image from "next/image";
 import logo from "./Dimensionsprintlogo.png"
+import ElectronicsManufacturing from "../public/ElectronicsManufacturing.png"
+import PrototypeDevelopment from "../public/PrototypeDevelopment.png"
+import IoTDeviceAssembly from "../public/IoTDeviceAssembly.png"
+import LEDModuleProduction from "../public/LEDModuleProduction.png"
+import SensorIntegration from "../public/SensorIntegration.png"
+import ResearchEducation from "../public/Research&Education.png"
+import SmallBatchProduction from "../public/SmallBatchProduction.png"
+import CustomElectronics from "../public/CustomElectronics.png"
 export default function Home() {
   const [showContact, setShowContact] = useState(false);
   const siteName = "Dimensions Print"; // change your application name here
@@ -22,10 +30,11 @@ export default function Home() {
             </div>
             <span className="text-xl font-bold text-gray-900">{siteName}</span>
           </div>
-          <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
             <a href="#applications" className="text-gray-600 hover:text-gray-900 transition-colors">Applications</a>
             <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
+            <a href="/learn-more" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
             <Button onClick={() => setShowContact(true)} className="bg-gray-900 hover:bg-gray-800">
               Get Quote
             </Button>
@@ -37,13 +46,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-            <Badge className="mb-4 bg-gray-100 text-gray-900 hover:bg-gray-200">
-            ⚠️ under development
+              <Badge className="mb-4 bg-gray-100 text-gray-900 hover:bg-gray-200">
+                ⚠️ website under development
               </Badge>
               <Badge className="mb-4 bg-gray-100 text-gray-900 hover:bg-gray-200">
-              PCB Assembly and Custom Automation
+              cutting-edge 3D printing services
               </Badge>
-              <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <Badge className="mb-4 bg-gray-100 text-gray-900 hover:bg-gray-200">
+                PCB Assembly and Custom Automation
+              </Badge>
+              <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight">Affordable 3D Homes,
                 Desktop Pick & Place
                 <span className="block text-gray-600">Machine Excellence</span>
               </h1>
@@ -55,7 +67,7 @@ export default function Home() {
                   Request Service <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button variant="outline" size="lg" className="border-gray-300">
-                  Learn More
+                  <a href="/learn-more">Learn More</a>
                 </Button>
               </div>
             </div>
@@ -95,6 +107,7 @@ export default function Home() {
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   High-precision automated component placement for your PCB projects. From prototypes to small-batch production, we deliver quality assembly services.
                 </p>
+
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-700">
                     <CheckCircle2 className="h-5 w-5 text-gray-900" />
@@ -108,20 +121,6 @@ export default function Home() {
                     <CheckCircle2 className="h-5 w-5 text-gray-900" />
                     SMD Component Placement
                   </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-gray-200 bg-white origami-shadow">
-              <CardContent className="p-8 origami-card">
-                <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-4 transform -rotate-3">
-                  <Target className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Custom Applications</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  Our PNP machine capabilities extend beyond PCB assembly. We provide solutions for various automated placement and manufacturing needs.
-                </p>
-                <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-700">
                     <CheckCircle2 className="h-5 w-5 text-gray-900" />
                     Custom Component Placement
@@ -133,6 +132,37 @@ export default function Home() {
                   <li className="flex items-center gap-2 text-gray-700">
                     <CheckCircle2 className="h-5 w-5 text-gray-900" />
                     Precision Manufacturing
+                  </li>
+                </ul>
+
+              </CardContent>
+            </Card>
+
+            <Card className="border-gray-200 bg-white origami-shadow">
+              <CardContent className="p-8 origami-card">
+                <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-4 transform -rotate-3">
+                  <Target className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Innovative 3D Printed Housing Solutions</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  We provide cutting-edge 3D printing services to design and build sustainable, cost-effective, and customizable homes. Our technology ensures faster construction, reduced costs, and eco-friendly practices compared to traditional methods.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle2 className="h-5 w-5 text-gray-900" />
+                    3D Printed Residential Homes – Affordable, durable, and customizable houses.
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle2 className="h-5 w-5 text-gray-900" />
+                    Eco-Friendly Construction – Reduced waste and sustainable building materials.
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle2 className="h-5 w-5 text-gray-900" />
+                    Custom Design Solutions – Tailor-made architectural designs to fit client needs.
+                  </li>
+                  <li className="flex items-center gap-2 text-gray-700">
+                    <CheckCircle2 className="h-5 w-5 text-gray-900" />
+                    Fast Project Delivery – Complete construction in weeks instead of months.
                   </li>
                 </ul>
               </CardContent>
@@ -200,48 +230,48 @@ export default function Home() {
             {[
               {
                 title: "Electronics Manufacturing",
-                image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop",
+                image: ElectronicsManufacturing,
                 description: "Automated placement for production-grade PCB assemblies.",
               },
               {
                 title: "Prototype Development",
-                image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+                image: PrototypeDevelopment,
                 description: "Rapid prototyping with precise component placement.",
               },
               {
                 title: "Research & Education",
-                image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1200&auto=format&fit=crop",
+                image: ResearchEducation,
                 description: "Teach and explore advanced SMT workflows.",
               },
               {
                 title: "Small Batch Production",
-                image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=1200&auto=format&fit=crop",
+                image: SmallBatchProduction,
                 description: "Cost-effective runs with reliable repeatability.",
               },
               {
                 title: "IoT Device Assembly",
-                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+                image: IoTDeviceAssembly,
                 description: "Compact boards with fine-pitch components.",
               },
               {
                 title: "LED Module Production",
-                image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
+                image: LEDModuleProduction,
                 description: "Uniform LED placement for lighting products.",
               },
               {
                 title: "Sensor Integration",
-                image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop",
+                image: SensorIntegration,
                 description: "Accurate positioning for sensitive sensor packages.",
               },
               {
                 title: "Custom Electronics",
-                image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=1200&auto=format&fit=crop",
+                image: CustomElectronics,
                 description: "Tailored solutions beyond standard assemblies.",
               },
             ].map((app, index) => (
               <div key={index} className="bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow origami-card overflow-hidden">
                 <div className="aspect-[4/3] w-full overflow-hidden bg-gray-50">
-                  <img src={app.image} alt={app.title} className="w-full h-full object-cover" />
+                  <img src={app.image.src} alt={app.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-gray-900 mb-2">{app.title}</h3>
@@ -304,11 +334,11 @@ export default function Home() {
               <div className="space-y-2 text-gray-400">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>info@pnppro.com</span>
+                  <span>madhusudanghule1@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 7796080161</span>
                 </div>
               </div>
             </div>
